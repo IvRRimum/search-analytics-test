@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title SearchAnalyticsTest
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+
+    = # TODO: This is more of a monkey patch. If this was a real project, of course i would not do this
+    - if controller_name == "search"
+      = javascript_include_tag 'search'
+    - else 
+      = javascript_include_tag 'application'
+  %body
+    .container
+      = render "/layouts/navigation"
+      = render "/layouts/notifications"
+      = yield

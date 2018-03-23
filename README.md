@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 5. & sqlite(for a test, should do)
 
-Things you may want to cover:
+I implemented the analytics in Search channel(using action cable).
 
-* Ruby version
+In this way, we don't have to pressure database each time user does a "search". Instead we save the analytics(with counts) only when:
+1) User reloads the page( assumed that user click on the article or just refreshes, etc..)
+2) User click Search button
 
-* System dependencies
+As we would scale this, we could extend the calculative analytics part of "analytics save" to background jobs(sidekiq).
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+There are some stuff i would have done better in a real case scenario, but choose to monkey patch for this test(like the asset includes in layouts.

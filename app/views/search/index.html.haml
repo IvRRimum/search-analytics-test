@@ -1,0 +1,10 @@
+.row
+  .col-12
+    %h1="Search"
+    
+    .form-group
+      = text_field_tag :search_term, "", class: "form-control", placeholder: "Search term here.."
+      %br
+      = submit_tag "Search", class: "btn btn-primary btn-block search-button"
+
+    .search-results

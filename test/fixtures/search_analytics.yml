@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: search_analytics
+#
+#  id           :integer          not null, primary key
+#  search_term  :string
+#  search_count :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  search_term: MyString
+  search_count: 1
+
+two:
+  search_term: MyString
+  search_count: 1
